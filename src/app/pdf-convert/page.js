@@ -39,16 +39,16 @@ export default function PDFConvert() {
 
             img.onload = () => {
                 const imgWidth = 210;
-                const pageHeight = 297;
                 const imgHeight = (img.height * imgWidth) / img.width;
+                const pageHeight = imgHeight;
 
                 if (index > 0) {
-                    pdf.addPage();
+                    pdf.addPage([imgWidth, pageHeight]);
                 }
 
                 pdf.addImage(img, "PNG", 0, 0, imgWidth, imgHeight);
                 if (index === images.length - 1) {
-                    pdf.save("converted-images.pdf");
+                    pdf.save("converted-pdf.pdf");
                 }
             };
         });
