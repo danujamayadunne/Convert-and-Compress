@@ -55,8 +55,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="text-slate-500 pt-5 flex justify-center pl-2">
-        <p className="flex gap-1">A<span className='font-medium text-primary flex gap-1 items-center'><LockKeyhole style={{ width: "13px", height: "13px" }} /> privacy-first</span>web plaform. Mean? we <span className='font-medium text-primary'>don&#39;t upload any file to server</span>.</p>
+      <div className="text-slate-500 pt-2 flex justify-center lg:pt-5">
+        <p className="hidden lg:flex gap-1">A<span className='font-medium text-primary flex gap-1 items-center'><LockKeyhole style={{ width: "13px", height: "13px" }} /> privacy-first</span>web plaform. Mean? we <span className='font-medium text-primary'>don&#39;t upload any file to server</span>.</p>
+        <p className="text-center lg:hidden">A<span className='font-medium text-primary'> privacy-first</span> web plaform. Mean? we <span className='font-medium text-primary'>don&#39;t upload any file to server</span>.</p>
       </div>
 
       <div className="home_grid pt-16">
