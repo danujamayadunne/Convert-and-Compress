@@ -22,8 +22,6 @@ import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import Link from "next/link";
@@ -36,6 +34,8 @@ export default function ImageCompress() {
     const [imageSize, setImageSize] = useState('');
     const [originalSize, setOriginalSize] = useState('');
     const [sizeReductionRatio, setSizeReductionRatio] = useState('');
+    const [fileName, setFileName] = useState('');
+    const [fileExtension, setFileExtension] = useState('');
     const { setTheme } = useTheme()
 
     const handleFileChange = (event) => {
@@ -47,6 +47,8 @@ export default function ImageCompress() {
             setSizeReductionRatio('');
             const sizeKB = (file.size / 1024).toFixed(2);
             setOriginalSize(sizeKB);
+            setFileName(file.name.replace(/\.[^/.]+$/, ""));
+            setFileExtension(file.name.split('.').pop());
             compressImage(file, parseFloat(quality));
         }
     };
@@ -145,7 +147,7 @@ export default function ImageCompress() {
                         </div>
                     )}
                     {compressedImageURL && (
-                        <a href={compressedImageURL} download>
+                        <a href={compressedImageURL} download={`${fileName}_compressed.${fileExtension}`}>
                             <Button className="rounded-full">Download</Button>
                         </a>
                     )}
