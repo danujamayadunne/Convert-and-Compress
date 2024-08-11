@@ -153,7 +153,7 @@ export default function ImageCompress() {
                     )}
                 </CardContent>
                 <CardFooter>
-                    <p className="text-sm tracking-tight text-center text-gray-500">No data is sent to servers.<br />Your images stay private and secure!<br />Compression happens on your device.</p>
+                    <p className="text-sm tracking-tight text-center text-gray-500">No data is sent to servers.<br />Compression happens on your device.</p>
                 </CardFooter>
             </Card>
             <p className="footer text-xs tracking-tight text-center">
