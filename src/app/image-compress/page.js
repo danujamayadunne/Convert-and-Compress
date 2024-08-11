@@ -1,6 +1,6 @@
 'use client'
 import { useState } from "react";
-import { Moon, Sun } from "lucide-react"
+import { ArrowLeft, Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 import { Button } from "@/components/ui/button";
 import {
@@ -91,6 +91,14 @@ export default function ImageCompress() {
 
     return (
         <div className="flex flex-col justify-center items-center min-h-screen">
+            <div className="back">
+                <Link href="/">
+                    <Button className="flex gap-1" variant={"outline"}>
+                        <ArrowLeft style={{ width: "13px", height: "13px" }} />
+                        Back
+                    </Button>
+                </Link>
+            </div>
             <div className="theme">
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
