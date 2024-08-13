@@ -108,7 +108,7 @@ export default function Home() {
             <div className="flex flex-col gap-2">
               <p className="text-sm tracking-tight">Simple UI</p>
               <p className="text-sm tracking-tight">Unlimited Converts</p>
-              <p className="text-sm tracking-tight">Multiple Image at Once</p>
+              <p className="text-sm tracking-tight">Multiple Images at Once</p>
               <p className="text-sm tracking-tight">100% Free</p>
             </div>
           </CardContent>
@@ -127,7 +127,7 @@ export default function Home() {
             <div className="flex flex-col gap-2">
               <p className="text-sm tracking-tight">Simple UI</p>
               <p className="text-sm tracking-tight">Unlimited Compressions</p>
-              <p className="text-sm tracking-tight">4 Compression Options</p>
+              <p className="text-sm tracking-tight">Compression Preview</p>
               <p className="text-sm tracking-tight">100% Free</p>
             </div>
           </CardContent>
