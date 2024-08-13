@@ -57,7 +57,7 @@ export default function Home() {
 
       <div className="text-slate-500 pt-2 flex justify-center lg:pt-5">
         <p className="hidden lg:flex gap-1">A<span className='font-medium text-primary flex gap-1 items-center'><LockKeyhole style={{ width: "13px", height: "13px" }} /> privacy-first</span>web plaform. Mean? we <span className='font-medium text-primary'>don&#39;t upload any file to server</span>.</p>
-        <p className="text-center lg:hidden">A<span className='font-medium text-primary'> privacy-first</span> web plaform. Mean? we <span className='font-medium text-primary'>don&#39;t upload any file to server</span>.</p>
+        <p className="text-center mobilesubheading lg:hidden">A<span className='font-medium text-primary'> privacy-first</span> web plaform. Mean? we <span className='font-medium text-primary'>don&#39;t upload any file to server</span>.</p>
       </div>
 
       <div className="home_grid pt-16">
@@ -82,7 +82,7 @@ export default function Home() {
         </Card>
         <Card className="home_card">
           <CardHeader>
-            <CardTitle className="text-center text-xl font-medium">Image Covert</CardTitle>
+            <CardTitle className="text-center text-xl font-medium">Image Convert</CardTitle>
             <CardDescription className="text-center">Convert Images to JPG, JPEG, or PNG</CardDescription>
           </CardHeader>
           <CardContent>
@@ -120,9 +120,22 @@ export default function Home() {
         </Card>
         <Card className="home_card">
           <CardHeader>
-            <CardTitle className="text-center text-xl font-medium">Comming Soon</CardTitle>
-            <CardDescription className="text-center">New features</CardDescription>
+            <CardTitle className="text-center text-xl font-medium">Video Compress</CardTitle>
+            <CardDescription className="text-center">Compress Video for Better Size.</CardDescription>
           </CardHeader>
+          <CardContent>
+            <div className="flex flex-col gap-2">
+              <p className="text-sm tracking-tight">Simple UI</p>
+              <p className="text-sm tracking-tight">Unlimited Compressions</p>
+              <p className="text-sm tracking-tight">4 Compression Options</p>
+              <p className="text-sm tracking-tight">100% Free</p>
+            </div>
+          </CardContent>
+          <CardFooter>
+            <Link className="w-full" href="/video-compress">
+              <Button className="w-full rounded-full">Go</Button>
+            </Link>
+          </CardFooter>
         </Card>
       </div>
 

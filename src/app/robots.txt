@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://webtool-at9.pages.dev/sitemap.xml

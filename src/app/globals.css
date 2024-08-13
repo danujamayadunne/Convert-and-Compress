@@ -112,6 +112,12 @@
   border-radius: 10px;
 }
 
+.previewvideo{
+  width: 600px;
+  height: 330px;
+  border-radius: 10px;
+}
+
 .image_grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -120,6 +126,10 @@
 }
 
 @media screen and (max-width: 900px) {
+
+  .mobilesubheading{
+    width: 90vw;
+  }
 
   .home_grid {
     width: 86vw;
@@ -132,6 +142,12 @@
 
   .card {
     min-width: 90vw;
+  }
+
+  .previewvideo{
+    width: 88vw;
+    height: 300px;
+    border-radius: 10px;
   }
 
   .footer {
