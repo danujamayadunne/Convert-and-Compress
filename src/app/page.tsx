@@ -69,7 +69,7 @@ export default function Home() {
           <CardContent>
             <div className="flex flex-col gap-2">
               <p className="text-sm tracking-tight">Simple UI</p>
-              <p className="text-sm tracking-tight">Unlimited Converts</p>
+              <p className="text-sm tracking-tight">Unlimited Compressions</p>
               <p className="text-sm tracking-tight">4 Compression Options</p>
               <p className="text-sm tracking-tight">100% Free</p>
             </div>
@@ -88,7 +88,7 @@ export default function Home() {
           <CardContent>
             <div className="flex flex-col gap-2">
               <p className="text-sm tracking-tight">Simple UI</p>
-              <p className="text-sm tracking-tight">Unlimited Compressions</p>
+              <p className="text-sm tracking-tight">Unlimited Converts</p>
               <p className="text-sm tracking-tight">3 Export Formats</p>
               <p className="text-sm tracking-tight">100% Free</p>
             </div>
