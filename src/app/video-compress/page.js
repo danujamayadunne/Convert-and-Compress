@@ -2,8 +2,7 @@
 import { useRef, useState } from 'react';
 import { ArrowLeft, Sun, Moon } from "lucide-react";
 import { useTheme } from "next-themes"
-import { FFmpeg } from '@ffmpeg/ffmpeg';
-import { fetchFile, toBlobURL } from '@ffmpeg/util';
+import loadFFMPEG from "@/components/ffmpeg";
 import { Button } from "@/components/ui/button";
 import {
     Card,
@@ -13,13 +12,6 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
-import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-} from "@/components/ui/select";
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -33,77 +25,46 @@ export default function VideoCompress() {
     const [compressedVideoURL, setCompressedVideoURL] = useState("");
     const [loaded, setLoaded] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
-    const [remainingTime, setRemainingTime] = useState("");
-    const ffmpegRef = useRef(new FFmpeg());
+    const ffmpegRef = useRef(null);
     const videoRef = useRef(null);
     const messageRef = useRef(null);
     const { setTheme } = useTheme()
 
-
-    const loadFFmpeg = async () => {
+    const initializeFFMPEG = async () => {
         setIsLoading(true);
-        const baseURL = 'https://unpkg.com/@ffmpeg/core@0.12.6/dist/umd';
-        const ffmpeg = ffmpegRef.current;
-        const timeRegex = /time=(\d{2}:\d{2}:\d{2}\.\d{2})/;
-        const durationRegex = /Duration: (\d{2}:\d{2}:\d{2}\.\d{2})/;
-
-        let totalDuration = 0;
-
-        ffmpeg.on('log', ({ message }) => {
-            if (messageRef.current) {
-                const durationMatch = message.match(durationRegex);
-                const timeMatch = message.match(timeRegex);
-
-                if (durationMatch) {
-                    totalDuration = parseTime(durationMatch[1]);
-                }
-
-                if (timeMatch) {
-                    const currentTime = parseTime(timeMatch[1]);
-                    if (totalDuration > 0) {
-                        const progress = (currentTime / totalDuration) * 100;
-                        let estimatedRemaining = 0;
-                        if (progress > 0) {
-                            estimatedRemaining = ((100 - progress) * currentTime) / progress;
-                        }
-                        messageRef.current.innerHTML = `Estimated Time: ${formatTime(estimatedRemaining)}`;
-                    }
-                }
-            }
-        });
-        await ffmpeg.load({
-            coreURL: await toBlobURL(`${baseURL}/ffmpeg-core.js`, 'text/javascript'),
-            wasmURL: await toBlobURL(`${baseURL}/ffmpeg-core.wasm`, 'application/wasm')
-        });
+        const ffmpeg = await loadFFMPEG(messageRef);
+        ffmpegRef.current = ffmpeg;
         setLoaded(true);
         setIsLoading(false);
-    };
-
-    const parseTime = (timeStr) => {
-        const [hours, minutes, seconds] = timeStr.split(':');
-        return (+hours) * 3600 + (+minutes) * 60 + (+seconds);
-    };
-
-    const formatTime = (timeInSeconds) => {
-        const hours = Math.floor(timeInSeconds / 3600);
-        const minutes = Math.floor((timeInSeconds % 3600) / 60);
-        const seconds = Math.floor(timeInSeconds % 60);
-        return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
     };
 
     const handleFileChange = async (event) => {
         const file = event.target.files?.[0];
         if (file) {
             setIsProcessing(true);
+            if (!loaded) {
+                await initializeFFMPEG();
+            }
             const ffmpeg = ffmpegRef.current;
-            await loadFFmpeg();
-            await ffmpeg.writeFile('input.mp4', await fetchFile(file));
-            await ffmpeg.exec(['-i', 'input.mp4', '-b:v', '1M', 'output.mp4']);
-            const data = (await ffmpeg.readFile('output.mp4'));
-            const videoBlob = new Blob([data.buffer], { type: 'video/mp4' });
-            const videoURL = URL.createObjectURL(videoBlob);
-            setCompressedVideoURL(videoURL);
-            setIsProcessing(false);
+            const fileReader = new FileReader();
+            fileReader.readAsArrayBuffer(file);
+            fileReader.onload = async () => {
+                const arrayBuffer = fileReader.result;
+                if (arrayBuffer) {
+                    // Write file to FFmpeg
+                    await ffmpeg.writeFile('input.mp4', new Uint8Array(arrayBuffer));
+                    await ffmpeg.exec(['-i', 'input.mp4', '-b:v', '1M', 'output.mp4']);
+                    const data = await ffmpeg.readFile('output.mp4');
+                    const videoBlob = new Blob([data.buffer], { type: 'video/mp4' });
+                    const videoURL = URL.createObjectURL(videoBlob);
+                    setCompressedVideoURL(videoURL);
+                    setIsProcessing(false);
+                }
+            };
+            fileReader.onerror = (error) => {
+                console.error('File reading error:', error);
+                setIsProcessing(false);
+            };
         }
     };
 
