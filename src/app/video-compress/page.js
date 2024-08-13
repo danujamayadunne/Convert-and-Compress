@@ -51,7 +51,6 @@ export default function VideoCompress() {
             fileReader.onload = async () => {
                 const arrayBuffer = fileReader.result;
                 if (arrayBuffer) {
-                    // Write file to FFmpeg
                     await ffmpeg.writeFile('input.mp4', new Uint8Array(arrayBuffer));
                     await ffmpeg.exec(['-i', 'input.mp4', '-b:v', '1M', 'output.mp4']);
                     const data = await ffmpeg.readFile('output.mp4');
