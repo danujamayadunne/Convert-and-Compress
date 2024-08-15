@@ -27,7 +27,6 @@ export default function MP4toWEB() {
     const [estimatedTime, setEstimatedTime] = useState(null);
     const videoRef = useRef(null);
     const startTimeRef = useRef(null);
-    const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
 
