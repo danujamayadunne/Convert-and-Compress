@@ -60,7 +60,7 @@ export default function Home() {
         <p className="text-center mobilesubheading lg:hidden">A<span className='font-medium text-primary'> privacy-first</span> web plaform. Mean? we <span className='font-medium text-primary'>don&#39;t upload any file to server</span>.</p>
       </div>
 
-      <div className="home_grid pt-16">
+      <div className="home_grid pt-16 pb-5">
         <Card className="home_card">
           <CardHeader>
             <CardTitle className="text-center text-xl font-medium">Image Compress</CardTitle>
@@ -133,6 +133,25 @@ export default function Home() {
           </CardContent>
           <CardFooter>
             <Link className="w-full" href="/video-compress">
+              <Button className="w-full rounded-full">Go</Button>
+            </Link>
+          </CardFooter>
+        </Card>
+        <Card className="home_card">
+          <CardHeader>
+            <CardTitle className="text-center text-xl font-medium">Video to WebM</CardTitle>
+            <CardDescription className="text-center">Convert Video to WebM</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="flex flex-col gap-2">
+              <p className="text-sm tracking-tight">Simple UI</p>
+              <p className="text-sm tracking-tight">Unlimited Converts</p>
+              <p className="text-sm tracking-tight">Converted Preview</p>
+              <p className="text-sm tracking-tight">100% Free</p>
+            </div>
+          </CardContent>
+          <CardFooter>
+            <Link className="w-full" href="/mp4-to-webm">
               <Button className="w-full rounded-full">Go</Button>
             </Link>
           </CardFooter>
