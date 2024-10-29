@@ -56,7 +56,7 @@ export default function Home() {
       </div>
 
       <div className="text-slate-500 pt-2 flex justify-center lg:pt-5">
-        <p className="hidden lg:flex gap-1">A<span className='font-medium text-primary flex gap-1 items-center'><LockKeyhole style={{ width: "13px", height: "13px" }} /> privacy-first</span>web plaform. Mean? we <span className='font-medium text-primary'>don&#39;t upload any file to server</span>.</p>
+        <p className="hidden lg:flex items-center gap-1"><LockKeyhole style={{ width: "13px", height: "13px" }} /><span className='font-medium text-primary flex gap-1 items-center'>No files are uploaded</span> to the servers. All happens in <span className='font-medium text-primary flex gap-1 items-center'>your PC</span>.</p>
         <p className="text-center mobilesubheading lg:hidden">A<span className='font-medium text-primary'> privacy-first</span> web plaform. Mean? we <span className='font-medium text-primary'>don&#39;t upload any file to server</span>.</p>
       </div>
 
@@ -118,7 +118,7 @@ export default function Home() {
             </Link>
           </CardFooter>
         </Card>
-        <Card className="home_card">
+        {/* <Card className="home_card">
           <CardHeader>
             <CardTitle className="text-center text-xl font-medium">Video Compress</CardTitle>
             <CardDescription className="text-center">Compress Video for Better Size.</CardDescription>
@@ -155,7 +155,7 @@ export default function Home() {
               <Button className="w-full rounded-full">Go</Button>
             </Link>
           </CardFooter>
-        </Card>
+        </Card> */}
       </div>
 
     </main>

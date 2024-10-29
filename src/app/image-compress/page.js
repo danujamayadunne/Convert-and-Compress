@@ -132,9 +132,9 @@ export default function ImageCompress() {
                         <label htmlFor="input">Select Image</label>
                     </Button>
                     <canvas id="canvas" className="hidden"></canvas>
-                    {selectedFile && (
+                    {compressedImageURL ? (
                         <img className="preview" src={compressedImageURL} alt="Compressed preview" />
-                    )}
+                    ) : null}
                     {selectedFile && (
                         <div className="flex flex-col gap-2">
                             <div>
