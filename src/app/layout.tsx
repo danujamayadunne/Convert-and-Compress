@@ -9,9 +9,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Convert and Compress - Convert and Compress Images and Videos ",
-  description: "Convert and compress images and video online with our platfrom. Achieve high-quality results while reducing file sizes for faster loading and easy sharing. Supports multiple formats, ensuring your media is optimized for web and mobile.",
-  keywords: "video compression tool, image converter, online media compression, video converter, reduce video file size, compress images, fast online compressor, media optimization, web and mobile compression, best video compressor, image converter tool"
+  title: "Convert and Compress - Free Online File Convert and Compress",
+  description: "Convert your files online with ease. Free, unlimited access to image, audio, video, and document converters.",
+  keywords: "file converter, online file converter, free converter, image compress, audio convert, video convert, video compression tool, image converter, online media compression, video converter, reduce video file size, compress images, fast online compressor, media optimization, web and mobile compression, best video compressor, image converter tool"
 };
 
 export default function RootLayout({
@@ -43,7 +43,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         > */}
-          {children}
+        {children}
         {/* </ThemeProvider> */}
       </body>
     </html>

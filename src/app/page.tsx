@@ -1,12 +1,5 @@
 'use client'
-import { LockKeyhole, Moon, Sun } from "lucide-react"
-import { useTheme } from "next-themes"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+import { LockKeyhole } from "lucide-react"
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -17,47 +10,22 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import Link from "next/link";
+import Navbar from "@/components/navbar";
 
 export default function Home() {
 
-  const { setTheme } = useTheme()
-
   return (
     <main>
-      <div className="theme">
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="outline" size="icon">
-              <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-              <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-              <span className="sr-only">Toggle theme</span>
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
-            <DropdownMenuItem onClick={() => setTheme("light")}>
-              Light
-            </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => setTheme("dark")}>
-              Dark
-            </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => setTheme("system")}>
-              System
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
-      </div>
+      <Navbar />
 
-
-      <div className="pt-24">
-        <div className="text-2xl font-medium tracking-tighter flex flex-col items-center lg:text-4xl">
-          <div> Finally, A <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ... text-transparent bg-clip-text">web-based</span> platform for </div>
-          <div> your everyday <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ... text-transparent bg-clip-text"> problems!</span></div>
+      <div className="header">
+        <div className="text-2xl font-medium tracking-tighter text-center lg:text-4xl">
+          <div> Free <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ... text-transparent bg-clip-text">online file converter</span>.</div>
         </div>
       </div>
 
-      <div className="text-slate-500 pt-2 flex justify-center lg:pt-5">
-        <p className="hidden lg:flex items-center gap-1"><LockKeyhole style={{ width: "13px", height: "13px" }} /><span className='font-medium text-primary flex gap-1 items-center'>No files are uploaded</span> to the servers. All happens in <span className='font-medium text-primary flex gap-1 items-center'>your PC</span>.</p>
-        <p className="text-center mobilesubheading lg:hidden">A<span className='font-medium text-primary'> privacy-first</span> web plaform. Mean? we <span className='font-medium text-primary'>don&#39;t upload any file to server</span>.</p>
+      <div className="text-slate-500 pt-2 text-center lg:flex lg:justify-center">
+        <p className="flex items-center gap-1"> Convert your files from one format to another online with ease. </p>
       </div>
 
       <div className="home_grid pt-16 pb-5">
@@ -68,94 +36,75 @@ export default function Home() {
           </CardHeader>
           <CardContent>
             <div className="flex flex-col gap-2">
-              <p className="text-sm tracking-tight">Simple UI</p>
               <p className="text-sm tracking-tight">Unlimited Compressions</p>
               <p className="text-sm tracking-tight">4 Compression Options</p>
               <p className="text-sm tracking-tight">100% Free</p>
+              <p className="text-sm tracking-tight" style={{visibility: "hidden"}}>Unlimited Converts</p>
             </div>
           </CardContent>
           <CardFooter>
             <Link className="w-full" href="/image-compress">
-              <Button className="w-full rounded-full">Go</Button>
+              <Button className="w-full">Go</Button>
             </Link>
           </CardFooter>
         </Card>
         <Card className="home_card">
           <CardHeader>
             <CardTitle className="text-center text-xl font-medium">Image Convert</CardTitle>
-            <CardDescription className="text-center">Convert Images to JPG, JPEG, or PNG</CardDescription>
+            <CardDescription className="text-center">Convert Images to Modern Formats</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="flex flex-col gap-2">
-              <p className="text-sm tracking-tight">Simple UI</p>
               <p className="text-sm tracking-tight">Unlimited Converts</p>
-              <p className="text-sm tracking-tight">3 Export Formats</p>
+              <p className="text-sm tracking-tight">All Modern Convert Formats</p>
+              <p className="text-sm tracking-tight">Quality Control</p>
               <p className="text-sm tracking-tight">100% Free</p>
             </div>
           </CardContent>
           <CardFooter>
             <Link className="w-full" href="/image-convert">
-              <Button className="w-full rounded-full">Go</Button>
+              <Button className="w-full">Go</Button>
             </Link>
           </CardFooter>
         </Card>
         <Card className="home_card">
           <CardHeader>
-            <CardTitle className="text-center text-xl font-medium">Image to PDF</CardTitle>
-            <CardDescription className="text-center">Convert Images to PDF</CardDescription>
+            <CardTitle className="text-center text-xl font-medium">Audio Convert</CardTitle>
+            <CardDescription className="text-center">Convert Audio to Modern Formats</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="flex flex-col gap-2">
-              <p className="text-sm tracking-tight">Simple UI</p>
               <p className="text-sm tracking-tight">Unlimited Converts</p>
-              <p className="text-sm tracking-tight">Multiple Images at Once</p>
+              <p className="text-sm tracking-tight">All Modern Convert Formats</p>
+              <p className="text-sm tracking-tight">Quality Control</p>
               <p className="text-sm tracking-tight">100% Free</p>
             </div>
           </CardContent>
           <CardFooter>
-            <Link className="w-full" href="/pdf-convert">
-              <Button className="w-full rounded-full">Go</Button>
-            </Link>
-          </CardFooter>
-        </Card>
-        {/* <Card className="home_card">
-          <CardHeader>
-            <CardTitle className="text-center text-xl font-medium">Video Compress</CardTitle>
-            <CardDescription className="text-center">Compress Video for Better Size.</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="flex flex-col gap-2">
-              <p className="text-sm tracking-tight">Simple UI</p>
-              <p className="text-sm tracking-tight">Unlimited Compressions</p>
-              <p className="text-sm tracking-tight">Compression Preview</p>
-              <p className="text-sm tracking-tight">100% Free</p>
-            </div>
-          </CardContent>
-          <CardFooter>
-            <Link className="w-full" href="/video-compress">
-              <Button className="w-full rounded-full">Go</Button>
+            <Link className="w-full" href="/audio-convert">
+              <Button className="w-full">Go</Button>
             </Link>
           </CardFooter>
         </Card>
         <Card className="home_card">
           <CardHeader>
-            <CardTitle className="text-center text-xl font-medium">Video to WebM</CardTitle>
-            <CardDescription className="text-center">Convert Video to WebM</CardDescription>
+            <CardTitle className="text-center text-xl font-medium">Video Convert</CardTitle>
+            <CardDescription className="text-center">Convert Video to Modern Formats</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="flex flex-col gap-2">
-              <p className="text-sm tracking-tight">Simple UI</p>
               <p className="text-sm tracking-tight">Unlimited Converts</p>
-              <p className="text-sm tracking-tight">Converted Preview</p>
+              <p className="text-sm tracking-tight">All Modern Convert Formats</p>
+              <p className="text-sm tracking-tight">Quality Control</p>
               <p className="text-sm tracking-tight">100% Free</p>
             </div>
           </CardContent>
           <CardFooter>
-            <Link className="w-full" href="/mp4-to-webm">
-              <Button className="w-full rounded-full">Go</Button>
+            <Link className="w-full" href="/video-convert">
+              <Button className="w-full">Go</Button>
             </Link>
           </CardFooter>
-        </Card> */}
+        </Card>
       </div>
 
     </main>
