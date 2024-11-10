@@ -102,9 +102,6 @@ export default function PDFCompress() {
                         </a>
                     )}
                 </CardContent>
-                <CardFooter>
-                    <p className="text-sm tracking-tight text-center text-gray-500">No data is sent to servers.<br />Compression happens on your browser.</p>
-                </CardFooter>
             </Card>
         </div>
     );

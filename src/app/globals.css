@@ -100,10 +100,10 @@
 }
 
 .home_grid {
-  width: 90vw;
+  width: 66vw;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   grid-row-gap: 23px;
 }
@@ -112,7 +112,10 @@
   border-radius: 21.3px;
 }
 
-
+.home_grid_second{
+  width: 66vw;
+  margin: 0 auto;
+}
 
 .back {
   position: absolute;

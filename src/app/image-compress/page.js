@@ -133,9 +133,6 @@ export default function ImageCompress() {
                         </a>
                     )}
                 </CardContent>
-                <CardFooter>
-                    <p className="text-sm tracking-tight text-center text-gray-500">No data is sent to servers.<br />Convert happens on your browser.</p>
-                </CardFooter>
             </Card>
 
         </div>
