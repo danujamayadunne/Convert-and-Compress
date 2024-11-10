@@ -296,7 +296,7 @@ export default function VideoConvert() {
                 </CardContent>
                 <CardFooter className="flex flex-col gap-2">
                     <p className="text-sm tracking-tight text-center text-gray-500">
-                        No data is sent to servers.<br />Conversion happens on your device.
+                        No data is sent to servers.<br />Conversion happens on your browser.
                     </p>
                 </CardFooter>
             </Card>

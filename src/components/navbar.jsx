@@ -44,7 +44,7 @@ export default function Navbar() {
 
     return (
         <div className="navbar_div">
-            <div className="flex gap-10 items-center border-b navbar">
+            <div className="flex gap-10 items-center navbar">
                 <Link href="/">
                     <p className="logo tracking-tight font-medium">Convert<span className="font-light">&</span>Compress<span className="tracking-tight font-medium"></span></p>
                 </Link>
