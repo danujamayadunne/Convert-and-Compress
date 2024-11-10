@@ -129,7 +129,7 @@ export default function ImageCompress() {
                     )}
                     {compressedImageURL && (
                         <a href={compressedImageURL} download={`${fileName}_compressed.${fileExtension}`}>
-                            <Button className="rounded-full" variant="accent">Download</Button>
+                            <Button className="rounded-full" variant="accent">Download Compressed Image</Button>
                         </a>
                     )}
                 </CardContent>

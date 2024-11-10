@@ -31,7 +31,7 @@ export default function Home() {
       <div className="home_grid pt-16 pb-5">
         <Card className="home_card">
           <CardHeader>
-            <CardTitle className="text-center text-xl font-medium">Image Compress</CardTitle>
+            <CardTitle className="text-center text-xl font-medium">Image Compressor</CardTitle>
             <CardDescription className="text-center">Compress Images for Better Size</CardDescription>
           </CardHeader>
           <CardContent>
@@ -50,7 +50,7 @@ export default function Home() {
         </Card>
         <Card className="home_card">
           <CardHeader>
-            <CardTitle className="text-center text-xl font-medium">Image Convert</CardTitle>
+            <CardTitle className="text-center text-xl font-medium">Image Converter</CardTitle>
             <CardDescription className="text-center">Convert Images to Modern Formats</CardDescription>
           </CardHeader>
           <CardContent>
@@ -69,7 +69,7 @@ export default function Home() {
         </Card>
         <Card className="home_card">
           <CardHeader>
-            <CardTitle className="text-center text-xl font-medium">Audio Convert</CardTitle>
+            <CardTitle className="text-center text-xl font-medium">Audio Converter</CardTitle>
             <CardDescription className="text-center">Convert Audio to Modern Formats</CardDescription>
           </CardHeader>
           <CardContent>
@@ -88,7 +88,7 @@ export default function Home() {
         </Card>
         <Card className="home_card">
           <CardHeader>
-            <CardTitle className="text-center text-xl font-medium">Video Convert</CardTitle>
+            <CardTitle className="text-center text-xl font-medium">Video Converter</CardTitle>
             <CardDescription className="text-center">Convert Video to Modern Formats</CardDescription>
           </CardHeader>
           <CardContent>
