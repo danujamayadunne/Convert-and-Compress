@@ -18,6 +18,9 @@ export default function Navbar() {
         ],
         "Audio Tools": [
             { name: "Audio Converter", link: "/audio-convert", icon: FileMusic },
+        ],
+        "Document Tools": [
+            { name: "PDF Compressor", link: "/pdf-compress", icon: FileImage },
         ]
     };
 

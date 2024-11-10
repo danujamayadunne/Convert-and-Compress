@@ -105,6 +105,25 @@ export default function Home() {
             </Link>
           </CardFooter>
         </Card>
+        <Card className="home_card">
+          <CardHeader>
+            <CardTitle className="text-center text-xl font-medium">PDF Compressor</CardTitle>
+            <CardDescription className="text-center">Compress PDF for Better Size</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="flex flex-col gap-2">
+              <p className="text-sm tracking-tight">Unlimited Compressions</p>
+              <p className="text-sm tracking-tight">4 Compression Options</p>
+              <p className="text-sm tracking-tight">100% Free</p>
+              <p className="text-sm tracking-tight" style={{visibility: "hidden"}}>Unlimited Converts</p>
+            </div>
+          </CardContent>
+          <CardFooter>
+            <Link className="w-full" href="/image-compress">
+              <Button className="w-full">Go</Button>
+            </Link>
+          </CardFooter>
+        </Card>
       </div>
 
     </main>
