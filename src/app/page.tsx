@@ -105,7 +105,7 @@ export default function Home() {
 
       <div className="home_grid_second pt-16 pb-5">
         <p className="font-medium tracking-tight text-lg">Your Privacy. Our Commitment.</p>
-        <p className="tracking-tight text-sm pt-2">At Convert&Compress, we believe in keeping your data exactly where it belongs—on your device. With every interaction happening directly in your browser, we ensure your files never leave your control. No uploads to our servers. Our commitment to privacy and security is built into every feature, so you can focus on what matters most—without worrying about your data. Simple, secure, and private. Just the way it should be.</p>
+        <p className="tracking-tight text-sm pt-2">At ConvertAndCompress, we believe in keeping your data exactly where it belongs—on your device. With every interaction happening directly in your browser, we ensure your files never leave your control. No uploads to our servers. Our commitment to privacy and security is built into every feature, so you can focus on what matters most—without worrying about your data. Simple, secure, and private. Just the way it should be.</p>
       </div>
 
       <Footer/>
