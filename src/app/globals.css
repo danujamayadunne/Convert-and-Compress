@@ -154,8 +154,8 @@
 
 @media screen and (max-width: 900px) {
 
-  .mobilesubheading {
-    width: 90vw;
+  .logo {
+    font-size: 16px;
   }
 
   .home_grid {
