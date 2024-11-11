@@ -24,7 +24,7 @@ export default function Home() {
       "100% Free",
       " "
     ],
-    link: "/image-compress"
+    link: "/image-compressor"
   }, {
     title: "Image Converter",
     description: "Convert Images to Modern Formats",
@@ -34,7 +34,7 @@ export default function Home() {
       "Quality Control",
       "100% Free",
     ],
-    link: "/image-convert"
+    link: "/image-converter"
   }, {
     title: "Audio Converter",
     description: "Convert Audio to Modern Formats",
@@ -44,7 +44,7 @@ export default function Home() {
       "Quality Control",
       "100% Free",
     ],
-    link: "/audio-convert"
+    link: "/audio-converter"
   }, {
     title: "Video Converter",
     description: "Convert Video to Modern Formats",
@@ -54,7 +54,7 @@ export default function Home() {
       "Quality Control",
       "100% Free",
     ],
-    link: "/video-convert"
+    link: "/video-converter"
   }, {
     title: "PDF Compressor",
     description: "Compress PDF for Better Size",
@@ -63,8 +63,20 @@ export default function Home() {
       "4 Compression Options",
       "100% Free",
     ],
-    link: "/pdf-compress"
-  }]
+    link: "/pdf-compressor"
+  },
+  {
+    title: "PDF to JPG Converter",
+    description: "Convert PDF to JPG",
+    features: [
+      "Unlimited Converts",
+      "Multiple Pages Support",
+      "100% Free",
+    ],
+    link: "/pdf-to-jpg"
+  },
+
+  ]
 
   return (
     <main>
@@ -108,7 +120,7 @@ export default function Home() {
         <p className="tracking-tight text-sm pt-2">At ConvertAndCompress, we believe in keeping your data exactly where it belongs—on your device. With every interaction happening directly in your browser, we ensure your files never leave your control. No uploads to our servers. Our commitment to privacy and security is built into every feature, so you can focus on what matters most—without worrying about your data. Simple, secure, and private. Just the way it should be.</p>
       </div>
 
-      <Footer/>
+      <Footer />
 
     </main>
   );
