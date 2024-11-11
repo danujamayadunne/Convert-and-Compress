@@ -25,7 +25,7 @@ export default function BlogPost() {
 
                     <div className="text-gray-700 leading-relaxed">
                         <p className="mb-6">
-                            Selecting the best file formats for web is crucial for faster load times, better quality, and improved user experience. Whether you're dealing with images, PDFs, or videos, each file type has formats optimized for specific uses. Here&apos;s a guide on choosing the right format for your content, including tips for compressing and converting your files for the web.
+                            Selecting the best file formats for web is crucial for faster load times, better quality, and improved user experience. Whether you&apos;re dealing with images, PDFs, or videos, each file type has formats optimized for specific uses. Here&apos;s a guide on choosing the right format for your content, including tips for compressing and converting your files for the web.
                         </p>
 
                         <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
