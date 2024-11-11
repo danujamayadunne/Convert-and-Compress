@@ -33,7 +33,7 @@ export default function TermsOfService() {
 
                 <p className="tracking-tight" style={{ marginTop: "19px" }}>
                     <span className="font-medium">5. Limitation of Liability</span><br />
-                    ConvertandCompress is provided "as is" without any warranties. We do not guarantee the accuracy, reliability, or suitability of the service for your purposes. We are not liable for any damages resulting from the use or inability to use the service.
+                    ConvertandCompress is provided &quot;as is&quat; without any warranties. We do not guarantee the accuracy, reliability, or suitability of the service for your purposes. We are not liable for any damages resulting from the use or inability to use the service.
                 </p>
 
                 <p className="tracking-tight" style={{ marginTop: "19px" }}>
