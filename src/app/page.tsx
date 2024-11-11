@@ -75,7 +75,10 @@ export default function Home() {
       <Navbar />
 
       <div className="header">
-        <div className="text-2xl font-medium tracking-tighter text-center lg:text-4xl">
+        <div className="flex justify-center">
+          <a href="https://www.producthunt.com/posts/convert-and-compress?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-convert&#0045;and&#0045;compress" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=600503&theme=light" alt="Convert&#0032;and&#0032;Compress - Free&#0032;online&#0032;file&#0032;converter&#0032;and&#0032;compressor | Product Hunt" style={{ width: "200px", height: "54px" }} /></a>
+        </div>
+        <div className="text-2xl font-medium tracking-tighter text-center pt-6 lg:text-4xl">
           <div> Free <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ... text-transparent bg-clip-text">online file converter</span> & <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ... text-transparent bg-clip-text">compressor</span>.</div>
         </div>
       </div>
