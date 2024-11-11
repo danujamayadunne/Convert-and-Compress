@@ -24,7 +24,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Convert and Compress",
-    "url": "https://yourwebsite.com",
+    "url": "https://convertandcompress.com",
     "description": "Convert and compress images and video online with our platfrom. Achieve high-quality results while reducing file sizes for faster loading and easy sharing. Supports multiple formats, ensuring your media is optimized for web and mobile.",
   };
 

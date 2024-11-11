@@ -21,8 +21,6 @@ export default function Home() {
       "Unlimited Compressions",
       "Support Modern Image Formats",
       "Quality Control",
-      "100% Free",
-      " "
     ],
     link: "/image-compressor"
   }, {
@@ -32,7 +30,6 @@ export default function Home() {
       "Unlimited Converts",
       "All Modern Convert Formats",
       "Quality Control",
-      "100% Free",
     ],
     link: "/image-converter"
   }, {
@@ -42,7 +39,6 @@ export default function Home() {
       "Unlimited Converts",
       "All Modern Convert Formats",
       "Quality Control",
-      "100% Free",
     ],
     link: "/audio-converter"
   }, {
@@ -52,7 +48,6 @@ export default function Home() {
       "Unlimited Converts",
       "All Modern Convert Formats",
       "Quality Control",
-      "100% Free",
     ],
     link: "/video-converter"
   }, {
@@ -61,17 +56,14 @@ export default function Home() {
     features: [
       "Unlimited Compressions",
       "4 Compression Options",
-      "100% Free",
     ],
     link: "/pdf-compressor"
-  },
-  {
+  }, {
     title: "PDF to JPG Converter",
     description: "Convert PDF to JPG",
     features: [
       "Unlimited Converts",
       "Multiple Pages Support",
-      "100% Free",
     ],
     link: "/pdf-to-jpg"
   },

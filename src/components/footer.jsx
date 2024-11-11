@@ -33,6 +33,12 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
+            <div className="flex tracking-tight text-sm" style={{ gap: "9px" }}>
+                <Link href="/p/about-us">About Us</Link>
+                <Link href="/blog">Blog</Link>
+                <Link href="/p/privacy-policy">Privacy Policy</Link>
+                <Link href="/p/terms-of-service">Terms of Service</Link>
+            </div>
             <div style={{ marginTop: "28px", paddingTop: "0.6px", backgroundColor: "gray" }}>
                 <hr></hr>
             </div>
