@@ -29,6 +29,24 @@ export default function BlogPage() {
             title: 'JPEG vs. PNG vs. GIF: How to Choose and Convert Image Formats Easily',
             description: 'Learn the differences between JPEG, PNG, and GIF and how to choose the right format for your images.',
             src: "/"
+        },
+        {
+            slug: 'how-to-improve-website-speed-with-optimized-image-and-video-files',
+            title: 'How to Improve Website Speed with Optimized Image and Video Files',
+            description: 'Optimizing your website images and videos is one of the fastest ways to improve load times and user experience.',
+            src: "/"
+        },
+        {
+            slug: '10-common-file-compression-mistakes-and-how-to-avoid-them',
+            title: '10 Common File Compression Mistakes and How to Avoid Them',
+            description: 'Avoid these common file compression mistakes to ensure your files are compressed correctly and efficiently.',
+            src: "/"
+        },
+        {
+            slug: 'how-to-boost-seo-by-compressing-images-without-losing-quality',
+            title: 'How to Boost SEO by Compressing Images Without Losing Quality',
+            description: 'Learn how to compress images without losing quality to boost your website SEO and improve user experience.',
+            src: "/"
         }
     ]
     return (
@@ -51,9 +69,6 @@ export default function BlogPage() {
                                 <div className="p-6">
                                     <p className="text-xl font-medium tracking-tight text-gray-800 mb-2">{post.title}</p>
                                     <p className="text-gray-600 mb-4 text-sm">{post.description}</p>
-                                    <p className="text-sm">
-                                        Read More
-                                    </p>
                                 </div>
                             </Link>
                         </div>
