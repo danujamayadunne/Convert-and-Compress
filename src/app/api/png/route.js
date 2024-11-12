@@ -1,5 +1,7 @@
 import puppeteer from 'puppeteer';
 
+export const runtime = 'edge';
+
 export async function POST(req) {
     try {
         const data = await req.json();
