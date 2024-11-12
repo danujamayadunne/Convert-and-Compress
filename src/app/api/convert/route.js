@@ -1,6 +1,8 @@
 import puppeteer from 'puppeteer';
 import { NextResponse } from 'next/server';
 
+export const runtime = 'edge';
+
 export async function POST(req) {
     try {
         const { imageUrl } = await req.json(); // Extract image URL from request body
