@@ -25,7 +25,7 @@ export default function BlogPost() {
 
                     <div className="text-gray-700 leading-relaxed">
                         <p className="mb-6">
-                            Optimizing your website's images and videos is one of the fastest ways to improve load times and user experience. In this guide, we’ll explore easy techniques and tools you can use to ensure your media files don’t slow down your site.
+                            Optimizing your website&apos;s images and videos is one of the fastest ways to improve load times and user experience. In this guide, we&apos;ll explore easy techniques and tools you can use to ensure your media files don&apos;t slow down your site.
                         </p>
 
                         <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">

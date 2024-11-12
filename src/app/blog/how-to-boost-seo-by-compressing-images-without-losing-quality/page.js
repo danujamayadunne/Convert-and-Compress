@@ -100,7 +100,7 @@ export default function BlogPost() {
                             Compress Images and Improve Your SEO Effortlessly
                         </h2>
                         <p className="mb-6">
-                            Compressing images without losing quality is a simple yet effective way to boost your blog's SEO. By following these tips and using our <Link href="/image-compressor" target="_blank"><span className="text-blue-500">free image compression tools</span></Link>, you can ensure your website runs faster and ranks higher in search results. Don't let large image files slow you down—compress them for a better SEO performance today!
+                            Compressing images without losing quality is a simple yet effective way to boost your blog&apos;s SEO. By following these tips and using our <Link href="/image-compressor" target="_blank"><span className="text-blue-500">free image compression tools</span></Link>, you can ensure your website runs faster and ranks higher in search results. Don&apos;t let large image files slow you down—compress them for a better SEO performance today!
                         </p>
                     </div>
                 </article>
