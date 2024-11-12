@@ -1,12 +1,9 @@
 import puppeteer from 'puppeteer';
 
-export default async function handler(req, res) {
-    if (req.method !== 'POST') {
-        return res.status(405).json({ error: 'Method not allowed' });
-    }
-
+export async function POST(req) {
     try {
-        const { imageUrl } = req.body;
+        const data = await req.json();
+        const { imageUrl } = data;
 
         const browser = await puppeteer.launch({
             headless: true,
@@ -43,17 +40,26 @@ export default async function handler(req, res) {
     `);
 
         const pngData = await page.evaluate(() => convertImage());
-
         await browser.close();
 
         const base64Data = pngData.replace(/^data:image\/png;base64,/, '');
 
-        res.status(200).json({
+        return new Response(JSON.stringify({
             success: true,
             pngBase64: base64Data
+        }), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
         });
 
     } catch (error) {
-        res.status(500).json({ error: error.message });
+        return new Response(JSON.stringify({ error: error.message }), {
+            status: 500,
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
     }
 }
