@@ -1,4 +1,3 @@
-// pages/api/convert.js
 import puppeteer from 'puppeteer';
 
 export default async function handler(req, res) {
@@ -9,7 +8,6 @@ export default async function handler(req, res) {
     try {
         const { imageUrl } = req.body;
 
-        // Launch browser
         const browser = await puppeteer.launch({
             headless: true,
             args: ['--no-sandbox']
@@ -17,7 +15,6 @@ export default async function handler(req, res) {
 
         const page = await browser.newPage();
 
-        // HTML template with canvas conversion logic
         await page.setContent(`
       <html>
         <body>
@@ -45,12 +42,10 @@ export default async function handler(req, res) {
       </html>
     `);
 
-        // Execute conversion
         const pngData = await page.evaluate(() => convertImage());
 
         await browser.close();
 
-        // Remove data:image/png;base64, prefix
         const base64Data = pngData.replace(/^data:image\/png;base64,/, '');
 
         res.status(200).json({
