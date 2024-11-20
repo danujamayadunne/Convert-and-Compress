@@ -25,7 +25,7 @@ export default function BlogPost() {
 
                     <div className="text-gray-700 leading-relaxed">
                         <p className="mb-6">
-                            PDFs are an essential file format for sharing documents, but their size can often be a challenge. A large file might slow down uploads, take up significant storage, or even hinder emailing. That&amp;s where our *PDF Size Reducer* comes in. With just a few clicks, you can compress PDF documents and improve efficiency.
+                            PDFs are an essential file format for sharing documents, but their size can often be a challenge. A large file might slow down uploads, take up significant storage, or even hinder emailing. That&#39;s where our *PDF Size Reducer* comes in. With just a few clicks, you can compress PDF documents and improve efficiency.
                         </p>
 
                         <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
@@ -60,12 +60,12 @@ export default function BlogPost() {
                         </h2>
 
                         <p className="mb-6">
-                            Our *PDF Compressor* is designed for seamless performance and outstanding results. Here&amp;s why users love it:
+                            Our PDF Compressor is designed for seamless performance and outstanding results. Here&#39;s why users love it:
                         </p>
                         <ul className="mb-6">
                             <li><strong>High-Quality Output</strong> - Compress PDFs without compromising readability or design.</li>
                             <li><strong>Quick Processing</strong> - Achieve fast compression even for large files.</li>
-                            <li><strong>All-in-One Solution</strong> - Whether you need to compress data PDF, shrink PDF size, or minimize PDF size, we&amp;ve got you covered.</li>
+                            <li><strong>All-in-One Solution</strong> - Whether you need to compress data PDF, shrink PDF size, or minimize PDF size, we&#39;ve got you covered.</li>
                         </ul>
 
                         <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
@@ -87,7 +87,7 @@ export default function BlogPost() {
                         </h2>
 
                         <p className="mb-6">
-                            Stop letting oversized files slow you down. Use our <Link href="/pdf-compressor" target="_blank"><span className="text-blue-500">PDF Size Reducer</span></Link> to compress PDF documents and enhance efficiency. It&amp;s fast, reliable, and designed for results. Get started now and experience the difference!
+                            Stop letting oversized files slow you down. Use our <Link href="/pdf-compressor" target="_blank"><span className="text-blue-500">PDF Size Reducer</span></Link> to compress PDF documents and enhance efficiency. It&#39;s fast, reliable, and designed for results. Get started now and experience the difference!
                         </p>
                     </div>
                 </article>

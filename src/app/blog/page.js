@@ -47,7 +47,13 @@ export default function BlogPage() {
             title: 'How to Boost SEO by Compressing Images Without Losing Quality',
             description: 'Learn how to compress images without losing quality to boost your website SEO and improve user experience.',
             src: "/"
-        }
+        },
+        {
+            slug: 'reduce-pdf-file-size-easily-your-go-to-tool',
+            title: 'Reduce PDF File Size Easily: Your Go-To Tool',
+            description: 'Learn how to reduce PDF file size easily with this go-to tool for compressing PDFs.',
+            src: "/"
+        },
     ]
     return (
         <main>
