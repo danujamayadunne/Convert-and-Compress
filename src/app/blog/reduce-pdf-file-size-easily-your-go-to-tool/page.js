@@ -33,7 +33,7 @@ export default function BlogPost() {
                         </h2>
 
                         <p className="mb-6">
-                            Whether you're working on a professional report, a high-resolution portfolio, or sharing educational resources, compressing PDFs has numerous benefits:
+                            Whether you&#39;re working on a professional report, a high-resolution portfolio, or sharing educational resources, compressing PDFs has numerous benefits:
                         </p>
                         <ul className="mb-6">
                             <li><strong>Save Space</strong> - Minimize PDF size to save valuable storage space.</li>
