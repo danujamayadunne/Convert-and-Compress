@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: SITE_TITLE,
-    template: "%s | Convert and Compress"
+    template: "%s"
   },
   description: SITE_DESCRIPTION,
   keywords: [
