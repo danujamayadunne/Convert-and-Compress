@@ -6,10 +6,8 @@ import Link from 'next/link';
 export default function BlogPost() {
     return (
         <div className="min-h-screen bg-white">
-
             <Navbar />
-
-            <main className="max-w-3xl mx-auto px-6 py-12" style={{ paddingTop: "150px" }}>
+            <main className="max-w-3xl mx-auto px-6 py-12 font-sans" style={{ paddingTop: "150px" }}>
                 <article className="prose lg:prose-xl">
                     <header className="mb-12">
                         <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -37,7 +35,7 @@ export default function BlogPost() {
                         </p>
 
                         <ul className="mb-6">
-                        <li><strong>WebP</strong> - Offers superior compression without sacrificing quality. This format is recommended if you&apos;re looking to improve page speed without compromising image clarity. Use our free <Link href="/image-converter" target="_blank"><span className="text-blue-500">Image Converter</span></Link> to convert any image to WebP.</li>
+                            <li><strong>WebP</strong> - Offers superior compression without sacrificing quality. This format is recommended if you&apos;re looking to improve page speed without compromising image clarity. Use our free <Link href="/image-converter" target="_blank"><span className="text-blue-500">Image Converter</span></Link> to convert any image to WebP.</li>
                             <li><strong>JPEG</strong> - Ideal for photos due to its lossy compression, balancing quality and file size. Use our <Link href="/image-compressor" target="_blank"><span className="text-blue-500">Image Compression Tool</span></Link> to make JPEGs web-ready.</li>
                             <li><strong>PNG</strong> - Perfect for graphics with transparency but larger in size. Compress your PNGs with our <Link href="/image-compressor" target="_blank"><span className="text-blue-500">PNG Compression Tool</span></Link> for faster loading.</li>
                         </ul>
@@ -83,7 +81,7 @@ export default function BlogPost() {
 
                 <div className="mt-16 pt-8 border-t">
                     <div className="flex items-center space-x-4">
-                        <div className="h-12 w-12 rounded-full bg-gray-200" />
+                        <img src="/favicon.ico" className="h-12 w-12 rounded-full bg-gray-200" />
                         <div>
                             <h3 className="font-medium text-gray-900">Convert & Compress</h3>
                             <p className="text-gray-600 text-sm">
@@ -93,9 +91,7 @@ export default function BlogPost() {
                     </div>
                 </div>
             </main>
-
             <Footer />
-
         </div>
     );
 }

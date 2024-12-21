@@ -2,47 +2,79 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <div className="bg-gray-100 mt-20 p-9" style={{ paddingBottom: "19px" }}>
-            <div className="grid grid-cols-4">
-                <div>
-                    <p className="tracking-tight font-medium">Image Tools</p>
-                    <div className="text-sm tracking-tight flex flex-col gap-2 pt-2">
-                        <Link href="/image-compressor">Image Compressor</Link>
-                        <Link href="/image-converter">Image Converter</Link>
+        <footer className="border-t border-gray-100 py-16 px-6">
+            <div className="max-w-7xl mx-auto">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+                    <div className="space-y-4">
+                        <p className="text-sm font-normal text-black">Image Tools</p>
+                        <div className="flex flex-col gap-3">
+                            <Link href="/image-compressor" className="text-sm text-gray-500 hover:text-gray-800 transition-colors">
+                                Image Compressor
+                            </Link>
+                            <Link href="/image-converter" className="text-sm text-gray-500 hover:text-gray-800 transition-colors">
+                                Image Converter
+                            </Link>
+                        </div>
+                    </div>
+
+                    <div className="space-y-4">
+                        <p className="text-sm font-normal text-black">Video Tools</p>
+                        <div className="flex flex-col gap-3">
+                            <Link href="/video-converter" className="text-sm text-gray-500 hover:text-gray-800 transition-colors">
+                                MOV to MP4
+                            </Link>
+                            <Link href="/video-converter" className="text-sm text-gray-500 hover:text-gray-800 transition-colors">
+                                Video Converter
+                            </Link>
+                        </div>
+                    </div>
+
+                    <div className="space-y-4">
+                        <p className="text-sm font-normal text-black">Audio Tools</p>
+                        <div className="flex flex-col gap-3">
+                            <Link href="/audio-converter" className="text-sm text-gray-500 hover:text-gray-800 transition-colors">
+                                Audio Converter
+                            </Link>
+                        </div>
+                    </div>
+
+                    <div className="space-y-4">
+                        <p className="text-sm font-normal text-black">Document Tools</p>
+                        <div className="flex flex-col gap-3">
+                            <Link href="/pdf-compressor" className="text-sm text-gray-500 hover:text-gray-800 transition-colors">
+                                PDF Compressor
+                            </Link>
+                            <Link href="/pdf-to-jpg" className="text-sm text-gray-500 hover:text-gray-800 transition-colors">
+                                PDF to JPG
+                            </Link>
+                            <Link href="/pdf-to-word" className="text-sm text-gray-500 hover:text-gray-800 transition-colors">
+                                PDF to Word
+                            </Link>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <p className="tracking-tight font-medium">Video Tools</p>
-                    <div className="text-sm tracking-tight flex flex-col gap-2 pt-2">
-                        <Link href="/video-converter">MOV to MP4</Link>
-                        <Link href="/video-converter">Video Converter</Link>
-                    </div>
+
+                <div className="mt-16 flex flex-wrap gap-6 justify-center">
+                    <Link href="/p/about-us" className="text-sm text-gray-500 hover:text-gray-800 transition-colors">
+                        About Us
+                    </Link>
+                    <Link href="/blog" className="text-sm text-gray-500 hover:text-gray-800 transition-colors">
+                        Blog
+                    </Link>
+                    <Link href="/p/privacy-policy" className="text-sm text-gray-500 hover:text-gray-800 transition-colors">
+                        Privacy Policy
+                    </Link>
+                    <Link href="/p/terms-of-service" className="text-sm text-gray-500 hover:text-gray-800 transition-colors">
+                        Terms of Service
+                    </Link>
                 </div>
-                <div>
-                    <p className="tracking-tight font-medium">Audio Tools</p>
-                    <div className="text-sm tracking-tight flex flex-col gap-2 pt-2">
-                        <Link href="/audio-converter">Audio Converter</Link>
-                    </div>
-                </div>
-                <div>
-                    <p className="tracking-tight font-medium">Document Tools</p>
-                    <div className="text-sm tracking-tight flex flex-col gap-2 pt-2">
-                        <Link href="/pdf-compressor">PDF Compressor</Link>
-                        <Link href="/pdf-to-jpg">PDF to JPG</Link>
-                        <Link href="/pdf-to-word">PDF to Word</Link>
-                    </div>
+
+                <div className="mt-16 text-center">
+                    <p className="text-sm text-gray-400">
+                        ©2024 ConvertandCompress.com. All Rights Reserved.
+                    </p>
                 </div>
             </div>
-            <div className="flex tracking-tight text-sm" style={{ gap: "9px" }}>
-                <Link href="/p/about-us">About Us</Link>
-                <Link href="/blog">Blog</Link>
-                <Link href="/p/privacy-policy">Privacy Policy</Link>
-                <Link href="/p/terms-of-service">Terms of Service</Link>
-            </div>
-            <div style={{ marginTop: "28px", paddingTop: "0.6px", backgroundColor: "gray" }}>
-                <hr></hr>
-            </div>
-            <p className="tracking-tight text-center text-sm text-muted-foreground" style={{ marginTop: "28px" }}>©2024 ConvertandCompress.com. All Rights Reserved.</p>
-        </div>
-    )
+        </footer>
+    );
 }

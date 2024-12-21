@@ -13,7 +13,6 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer"
 
 export default function Home() {
-
   const data = [{
     title: "Image Compressor",
     description: "Compress Images for Better Size",
@@ -28,7 +27,7 @@ export default function Home() {
     description: "Convert Images to Modern Formats",
     features: [
       "Unlimited Converts",
-      "All Modern Convert Formats",
+      "Support Modern Image Formats",
       "Quality Control",
     ],
     link: "/image-converter"
@@ -37,7 +36,7 @@ export default function Home() {
     description: "Convert Audio to Modern Formats",
     features: [
       "Unlimited Converts",
-      "All Modern Convert Formats",
+      "Support Modern Audio Formats",
       "Quality Control",
     ],
     link: "/audio-converter"
@@ -46,7 +45,7 @@ export default function Home() {
     description: "Convert Video to Modern Formats",
     features: [
       "Unlimited Converts",
-      "All Modern Convert Formats",
+      "Support Modern Video Formats",
       "Quality Control",
     ],
     link: "/video-converter"
@@ -66,54 +65,70 @@ export default function Home() {
       "Multiple Pages Support",
     ],
     link: "/pdf-to-jpg"
-  },
-
-  ]
+  }]
 
   return (
-    <main>
+    <main className="min-h-screen bg-white">
       <Navbar />
 
-      <div className="header">
-        <div className="text-2xl font-medium tracking-tighter text-center pt-6 lg:text-4xl">
-          <div> Free <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ... text-transparent bg-clip-text">online file converter</span> & <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ... text-transparent bg-clip-text">compressor</span>.</div>
+      <div className="max-w-4xl mx-auto px-6 pt-32 pb-24">
+        <h1 className="text-3xl md:text-4xl lg:text-4xl font-light text-center tracking-tight">
+          Free online <span className="font-normal">file converter</span> & <span className="font-normal">compressor</span>
+        </h1>
+        <p className="text-gray-500 text-center text-lg" style={{marginTop: "9px"}}>
+          Effortlessly convert and compress your files online in few clicks
+        </p>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 pb-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {data.map((item, index) => (
+            <Card
+              key={index}
+              className="border-0 hover:shadow-[0_0_1rem_rgba(0,0,0,0.05)] transition-shadow duration-300"
+            >
+              <CardHeader className="space-y-3">
+                <CardTitle className="text-xl font-normal">{item.title}</CardTitle>
+                <CardDescription className="text-gray-500">{item.description}</CardDescription>
+              </CardHeader>
+
+              <CardContent>
+                <ul className="space-y-2 text-sm text-gray-500">
+                  {item.features.map((feature, index) => (
+                    <li key={index} className="flex items-center">
+                      <span className="mr-2 text-gray-300">―</span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+
+              <CardFooter>
+                <Link href={item.link} className="w-full">
+                  <Button
+                    className="w-full text-white rounded-none font-light"
+                  >
+                    Convert
+                  </Button>
+                </Link>
+              </CardFooter>
+            </Card>
+          ))}
         </div>
       </div>
 
-      <div className="text-slate-500 pt-2 text-center lg:flex lg:justify-center">
-        <p className="flex items-center gap-1"> Effortlessly convert and compress your files online in few clicks.</p>
-      </div>
-
-      <div className="home_grid pt-16 pb-5">
-        {data.map((item, index) => (
-          <Card className="home_card" key={index}>
-            <CardHeader>
-              <CardTitle className="text-center text-xl font-medium">{item.title}</CardTitle>
-              <CardDescription className="text-center">{item.description}</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <ul className="text-sm tracking-tight flex flex-col gap-2">
-                {item.features.map((feature, index) => (
-                  <li key={index}>{feature}</li>
-                ))}
-              </ul>
-            </CardContent>
-            <CardFooter>
-              <Link className="w-full" href={item.link}>
-                <Button>Go</Button>
-              </Link>
-            </CardFooter>
-          </Card>
-        ))}
-      </div>
-
-      <div className="home_grid_second pt-16 pb-5">
-        <p className="font-medium tracking-tight text-lg">Your Privacy. Our Commitment.</p>
-        <p className="tracking-tight text-sm pt-2">At ConvertAndCompress, we believe in keeping your data exactly where it belongs—on your device. With every interaction happening directly in your browser, we ensure your files never leave your control. No uploads to our servers. Our commitment to privacy and security is built into every feature, so you can focus on what matters most—without worrying about your data. Simple, secure, and private. Just the way it should be.</p>
+      <div className="max-w-2xl mx-auto px-6 pb-32">
+        <div className="space-y-4">
+          <h2 className="text-xl font-normal text-center">
+            Your Privacy. Our Commitment.
+          </h2>
+          <p className="text-gray-500 text-center text-sm leading-relaxed">
+            At Convert&Compress, we believe in keeping your data exactly where it belongs—on your device. With every interaction happening directly in your browser, we ensure your files never leave your control. No uploads to our servers. Our commitment to privacy and security is built into every feature, so you can focus on what matters most—without worrying about your data. Simple, secure, and private. Just the way it should be.
+          </p>
+        </div>
       </div>
 
       <Footer />
-
     </main>
   );
 }

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
-import { FileImage, FileMusic, FileVideo, FileText } from "lucide-react";
+import { FileImage, FileMusic, FileVideo, FileText, Search } from "lucide-react";
 import Link from "next/link";
 
-const SearchTool = () => {
+export default function SearchTool() {
     const [searchQuery, setSearchQuery] = useState('');
     const [searchResults, setSearchResults] = useState([]);
     const [isSearching, setIsSearching] = useState(false);
@@ -25,12 +25,10 @@ const SearchTool = () => {
             setIsSearching(false);
             return;
         }
-
         const results = tools.filter(tool => {
             const searchString = `${tool.name} ${tool.category} ${tool.keywords.join(' ')}`.toLowerCase();
             return searchString.includes(query.toLowerCase());
         });
-
         setSearchResults(results);
         setIsSearching(true);
     };
@@ -39,59 +37,53 @@ const SearchTool = () => {
         const debounceSearch = setTimeout(() => {
             searchTools(searchQuery);
         }, 300);
-
         return () => clearTimeout(debounceSearch);
     }, [searchQuery]);
 
-    const getIconColor = (category) => {
-        switch (category) {
-            case "Image Tools":
-                return "text-blue-500";
-            case "Video Tools":
-                return "text-red-500";
-            case "Audio Tools":
-                return "text-green-500";
-            case "Document Tools":
-                return "text-yellow-500";
-            default:
-                return "text-gray-500";
-        }
-    };
-
     return (
-        <div className="relative w-full max-w-md">
-            <Input
-                type="text"
-                placeholder="Search for tools..."
-                className="rounded-full w-full"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-            />
+        <div className="relative w-full">
+            <div className="relative">
+                <Input
+                    type="text"
+                    placeholder="Search tools..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full bg-gray-50 border-0 pl-10 h-9 text-sm placeholder:text-gray-400 focus:ring-0 focus:border-gray-200"
+                />
+                <Search
+                    size={16}
+                    className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+                />
+            </div>
 
             {isSearching && searchQuery && (
-                <Card className="absolute w-full mt-2 z-50">
-                    <CardContent className="p-2">
+                <Card className="absolute w-full mt-2 border-0 shadow-lg overflow-hidden">
+                    <CardContent className="p-0">
                         {searchResults.length > 0 ? (
-                            <div className="flex flex-col gap-2">
+                            <div className="py-2">
                                 {searchResults.map((tool, index) => {
                                     const Icon = tool.icon;
                                     return (
                                         <Link
                                             key={index}
                                             href={tool.link}
-                                            className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded-md transition-colors"
+                                            className="flex items-center gap-3 px-4 py-2 hover:bg-gray-50 transition-colors"
                                         >
-                                            <Icon className={`w-4 h-4 ${getIconColor(tool.category)}`} />
-                                            <div>
-                                                <div className="text-sm font-medium">{tool.name}</div>
-                                                <div className="text-xs text-gray-500">{tool.category}</div>
+                                            <div className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center">
+                                                <Icon size={16} className="text-gray-500" />
+                                            </div>
+                                            <div className="flex flex-col">
+                                                <span className="text-sm text-gray-900">{tool.name}</span>
+                                                <span className="text-xs text-gray-400">{tool.category}</span>
                                             </div>
                                         </Link>
                                     );
                                 })}
                             </div>
                         ) : (
-                            <div className="p-2 text-sm text-gray-500">No tools found</div>
+                            <div className="px-4 py-3 text-sm text-gray-500">
+                                No tools found
+                            </div>
                         )}
                     </CardContent>
                 </Card>
@@ -99,5 +91,3 @@ const SearchTool = () => {
         </div>
     );
 };
-
-export default SearchTool;

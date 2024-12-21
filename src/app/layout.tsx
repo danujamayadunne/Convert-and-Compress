@@ -1,53 +1,89 @@
 import type { Metadata } from "next";
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider"
 
 const poppins = Poppins({
   weight: ["200", "300", "400", "500", "600", "700"],
   subsets: ["latin"],
+  display: "swap",
 });
 
+const SITE_URL = 'https://convertandcompress.com';
+const SITE_TITLE = 'Convert and Compress - Free Online File Converter & Compressor';
+const SITE_DESCRIPTION = 'Free online tool to convert and compress images, videos, audio, and PDFs. No signup required, instant conversion with maximum quality retention.';
+
 export const metadata: Metadata = {
-  title: "Convert and Compress - Free Online File Convert and Compress",
-  description: "Convert your files online with ease. Free, unlimited access to image, audio, video, and document converters.",
-  keywords: "file converter, online file converter, free converter, image compress, audio convert, video convert, video compression tool, image converter, online media compression, video converter, reduce video file size, compress images, fast online compressor, media optimization, web and mobile compression, best video compressor, image converter tool"
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SITE_TITLE,
+    template: "%s | Convert and Compress"
+  },
+  description: SITE_DESCRIPTION,
+  keywords: [
+    "file converter",
+    "image compression",
+    "video converter",
+    "PDF compressor",
+    "audio converter",
+    "online compression tool",
+    "free file converter",
+    "media optimization",
+    "batch conversion",
+    "lossless compression"
+  ],
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: SITE_URL,
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    siteName: 'Convert and Compress'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+    },
+  },
+  alternates: {
+    canonical: SITE_URL
+  }
 };
+
+const STRUCTURED_DATA = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Convert and Compress",
+  "url": SITE_URL,
+  "description": SITE_DESCRIPTION,
+} as const;
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Convert and Compress",
-    "url": "https://convertandcompress.com",
-    "description": "Convert and compress images and video online with our platfrom. Achieve high-quality results while reducing file sizes for faster loading and easy sharing. Supports multiple formats, ensuring your media is optimized for web and mobile.",
-  };
-
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(STRUCTURED_DATA) }}
         />
       </head>
       <body className={poppins.className}>
-        {/* <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        > */}
         {children}
-        {/* </ThemeProvider> */}
+        <GoogleAnalytics gaId="G-TZ9R31DFWJ" />
       </body>
-      <GoogleAnalytics gaId="G-TZ9R31DFWJ" />
     </html>
   );
 }

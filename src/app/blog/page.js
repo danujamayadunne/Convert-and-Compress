@@ -56,32 +56,36 @@ export default function BlogPage() {
         },
     ]
     return (
-        <main>
+        <div className="min-h-screen bg-white">
             <Navbar />
-            <div style={{ paddingTop: "150px", paddingLeft: "90px", paddingRight: "90px" }}>
-                <p className="text-2xl font-medium">Blog Posts</p>
-                <div className="grid grid-cols-4 pt-6" style={{ gap: "19px" }}>
+            
+            <div className="max-w-7xl mx-auto px-6 pt-32 pb-24 font-sans">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-light text-center leading-tight mb-12">
+                    Blog Posts
+                </h1>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {posts.map((post) => (
                         <div
                             key={post.slug}
-                            className="bg-white rounded-lg overflow-hidden shadow-md"
+                            className="border-0 hover:shadow-[0_0_1rem_rgba(0,0,0,0.05)] transition-shadow duration-300"
                         >
                             <Link href={`/blog/${post.slug}`}>
-                                <img
-                                    src={post.src}
-                                    alt={post.title}
-                                    className="w-full h-48 object-cover"
-                                />
                                 <div className="p-6">
-                                    <p className="text-xl font-medium tracking-tight text-gray-800 mb-2">{post.title}</p>
-                                    <p className="text-gray-600 mb-4 text-sm">{post.description}</p>
+                                    <h2 className="text-xl font-normal text-gray-900 mb-2">
+                                        {post.title}
+                                    </h2>
+                                    <p className="text-sm text-gray-500">
+                                        {post.description}
+                                    </p>
                                 </div>
                             </Link>
                         </div>
                     ))}
                 </div>
             </div>
+
             <Footer />
-        </main>
+        </div>
     );
 }

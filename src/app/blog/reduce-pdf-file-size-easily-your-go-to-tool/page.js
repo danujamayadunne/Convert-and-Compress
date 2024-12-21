@@ -6,10 +6,8 @@ import Link from 'next/link';
 export default function BlogPost() {
     return (
         <div className="min-h-screen bg-white">
-
             <Navbar />
-
-            <main className="max-w-3xl mx-auto px-6 py-12" style={{ paddingTop: "150px" }}>
+            <main className="max-w-3xl mx-auto px-6 py-12 font-sans" style={{ paddingTop: "150px" }}>
                 <article className="prose lg:prose-xl">
                     <header className="mb-12">
                         <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -94,19 +92,15 @@ export default function BlogPost() {
 
                 <div className="mt-16 pt-8 border-t">
                     <div className="flex items-center space-x-4">
-                        <div className="h-12 w-12 rounded-full bg-gray-200" />
+                        <img src="/favicon.ico" className="h-12 w-12 rounded-full bg-gray-200" />
                         <div>
                             <h3 className="font-medium text-gray-900">Compress & Optimize</h3>
-                            <p className="text-gray-600 text-sm">
-                                Team
-                            </p>
+                            <p className="text-gray-600 text-sm">Team</p>
                         </div>
                     </div>
                 </div>
             </main>
-
             <Footer />
-
         </div>
     );
 }
