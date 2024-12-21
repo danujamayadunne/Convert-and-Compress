@@ -13,7 +13,7 @@ const TOOL_CATEGORIES = {
         { name: "Video Converter", link: "/video-converter", Icon: FileVideo },
     ],
     "Audio Tools": [
-        { name: "Audio Compressor", link: "/audio-compressor", Icon: FileMusic },
+        // { name: "Audio Compressor", link: "/audio-compressor", Icon: FileMusic },
         { name: "Audio Converter", link: "/audio-converter", Icon: FileMusic },
     ],
     "Document Tools": [
