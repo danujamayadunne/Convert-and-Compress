@@ -17,7 +17,7 @@ export default function About() {
                     Thank you for choosing Convert&Compress. We&apos;re committed to continuously improving our services and making Convert&Compress effortless for all.
                 </p>
             </div>
-            <Footer/>
+            <Footer />
         </main>
     )
 }
