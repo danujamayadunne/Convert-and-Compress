@@ -4,7 +4,7 @@ export default function Footer() {
     return (
         <footer className="border-t border-gray-100 py-16 px-6">
             <div className="max-w-7xl mx-auto">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-9">
                     <div className="space-y-4">
                         <p className="text-sm font-normal text-black">Image Tools</p>
                         <div className="flex flex-col gap-3">
@@ -52,6 +52,31 @@ export default function Footer() {
                             </Link>
                         </div>
                     </div>
+
+                    <div className="space-y-4">
+                        <p className="text-sm font-normal text-black">Unit Tools</p>
+                        <div className="flex flex-col gap-3">
+                            <Link href="/unit-converter" className="text-sm text-gray-500 hover:text-gray-800 transition-colors">
+                                Length Converter
+                            </Link>
+                            <Link href="/unit-converter" className="text-sm text-gray-500 hover:text-gray-800 transition-colors">
+                                Weight Converter
+                            </Link>
+                            <Link href="/unit-converter" className="text-sm text-gray-500 hover:text-gray-800 transition-colors">
+                                Temperature Converter
+                            </Link>
+                            <Link href="/unit-converter" className="text-sm text-gray-500 hover:text-gray-800 transition-colors">
+                                Time Converter
+                            </Link>
+                            <Link href="/unit-converter" className="text-sm text-gray-500 hover:text-gray-800 transition-colors">
+                                Data Converter
+                            </Link>
+                            <Link href="/unit-converter" className="text-sm text-gray-500 hover:text-gray-800 transition-colors">
+                                Unit Converter
+                            </Link>
+                        </div>
+                    </div>
+
                 </div>
 
                 <div className="mt-16 flex flex-wrap gap-6 justify-center">
@@ -66,6 +91,9 @@ export default function Footer() {
                     </Link>
                     <Link href="/p/terms-of-service" className="text-sm text-gray-500 hover:text-gray-800 transition-colors">
                         Terms of Service
+                    </Link>
+                    <Link href="/p/contact" className="text-sm text-gray-500 hover:text-gray-800 transition-colors">
+                        Contact
                     </Link>
                 </div>
 

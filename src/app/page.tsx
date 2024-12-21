@@ -65,7 +65,24 @@ export default function Home() {
       "Multiple Pages Support",
     ],
     link: "/pdf-to-jpg"
-  }]
+  }, //{
+  //   title: "Audio Compressor",
+  //   description: "Compress Audio for Better Size",
+  //   features: [
+  //     "Unlimited Compressions",
+  //     "Quality Control",
+  //   ],
+  //   link: "/audio-compressor"
+  // },
+  {
+    title: "Unit Converter",
+    description: "Convert Units",
+    features: [
+      "Unlimited Converts",
+      "Support Wide Range of Units",
+    ],
+    link: "/unit-converter"
+  }];
 
   return (
     <main className="min-h-screen bg-white">
@@ -75,7 +92,7 @@ export default function Home() {
         <h1 className="text-3xl md:text-4xl lg:text-4xl font-light text-center tracking-tight">
           Free online <span className="font-normal">file converter</span> & <span className="font-normal">compressor</span>
         </h1>
-        <p className="text-gray-500 text-center text-lg" style={{marginTop: "9px"}}>
+        <p className="text-gray-500 text-center text-lg" style={{ marginTop: "9px" }}>
           Effortlessly convert and compress your files online in few clicks
         </p>
       </div>

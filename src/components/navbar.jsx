@@ -1,5 +1,5 @@
 'use client'
-import { ChevronDown, FileImage, FileMusic, FileVideo } from "lucide-react";
+import { ChevronDown, FileImage, FileMusic, FileVideo, Ruler } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import SearchTool from "./search";
@@ -13,13 +13,17 @@ const TOOL_CATEGORIES = {
         { name: "Video Converter", link: "/video-converter", Icon: FileVideo },
     ],
     "Audio Tools": [
+        { name: "Audio Compressor", link: "/audio-compressor", Icon: FileMusic },
         { name: "Audio Converter", link: "/audio-converter", Icon: FileMusic },
     ],
     "Document Tools": [
         { name: "PDF Compressor", link: "/pdf-compressor", Icon: FileImage },
         { name: "PDF to JPG", link: "/pdf-to-jpg", Icon: FileImage },
         { name: "PDF to Word", link: "/pdf-to-word", Icon: FileImage },
-    ]
+    ],
+    "Unit Converter": [
+        { name: "Unit Converter", link: "/unit-converter", Icon: Ruler }
+    ],
 };
 
 const ToolCategory = ({ title, tools }) => (

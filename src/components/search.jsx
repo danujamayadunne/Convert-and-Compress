@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
-import { FileImage, FileMusic, FileVideo, FileText, Search } from "lucide-react";
+import { FileImage, FileMusic, FileVideo, FileText, Search, Ruler } from "lucide-react";
 import Link from "next/link";
 
 export default function SearchTool() {
@@ -11,12 +11,14 @@ export default function SearchTool() {
 
     const tools = [
         { name: "Image Compressor", category: "Image Tools", icon: FileImage, link: "/image-compressor", keywords: ["compress", "image", "photo", "picture", "reduce size"] },
-        { name: "Image Converter", category: "Image Tools", icon: FileImage, link: "/image-converter", keywords: ["convert", "image", "photo", "picture", "format", "webp"] },
-        { name: "Video Converter", category: "Video Tools", icon: FileVideo, link: "/video-converter", keywords: ["convert", "video", "mp4", "format", "mov"] },
-        { name: "Audio Converter", category: "Audio Tools", icon: FileMusic, link: "/audio-converter", keywords: ["convert", "audio", "mp3", "sound", "music"] },
+        { name: "Image Converter", category: "Image Tools", icon: FileImage, link: "/image-converter", keywords: ["convert", "image", "photo", "picture", "format", "webp", "png", "jpg", "jpeg"] },
+        { name: "Video Converter", category: "Video Tools", icon: FileVideo, link: "/video-converter", keywords: ["convert", "video", "mp4", "format", "mov", "avi", "webm"] },
+        { name: "Audio Compressor", category: "Audio Tools", icon: FileMusic, link: "/audio-compressor", keywords: ["compress", "audio", "mp3", "wav","sound", "music"] },
+        { name: "Audio Converter", category: "Audio Tools", icon: FileMusic, link: "/audio-converter", keywords: ["convert", "audio", "mp3", "wav", "sound", "music"] },
         { name: "PDF Compressor", category: "Document Tools", icon: FileText, link: "/pdf-compressor", keywords: ["compress", "pdf", "document", "reduce size"] },
         { name: "PDF to JPG", category: "Document Tools", icon: FileText, link: "/pdf-to-jpg", keywords: ["convert", "pdf", "jpg", "image", "document"] },
         { name: "PDF to Word", category: "Document Tools", icon: FileText, link: "/pdf-to-word", keywords: ["convert", "pdf", "word", "document"] },
+        { name: "Unit Converter", category: "Unit Converter", icon: Ruler, link: "/unit-converter", keywords: ["convert", "unit", "length", "weight", "temperature", "speed", "time", "area", "volume", "pressure", "angle", "data", "enery", "pressure"] },
     ];
 
     const searchTools = (query) => {

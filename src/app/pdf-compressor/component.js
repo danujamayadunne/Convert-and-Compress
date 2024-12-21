@@ -1,6 +1,5 @@
 'use client'
 import { useState } from "react";
-import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
     Card,
@@ -16,7 +15,6 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select";
-import Link from "next/link";
 import { PDFDocument } from 'pdf-lib';
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";

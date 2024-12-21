@@ -1,6 +1,6 @@
 'use client'
 import { useState, useRef } from "react";
-import { ArrowLeft, Play, Pause, Volume2, Maximize2, VolumeX } from "lucide-react"
+import { Play, Pause, Volume2, VolumeX } from "lucide-react"
 import { Button } from "@/components/ui/button";
 import {
     Card,
@@ -17,7 +17,6 @@ import {
     SelectValue,
 } from "@/components/ui/select";
 import { Slider } from "@/components/ui/slider"
-import Link from "next/link";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
