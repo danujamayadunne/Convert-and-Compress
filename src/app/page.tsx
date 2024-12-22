@@ -1,4 +1,5 @@
 'use client'
+import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -13,9 +14,12 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer"
 
 export default function Home() {
+  const [activeFilter, setActiveFilter] = useState('all');
+
   const data = [{
     title: "Image Compressor",
     description: "Compress Images for Better Size",
+    categories: ["images", "compress", "converter"],
     features: [
       "Unlimited Compressions",
       "Support Modern Image Formats",
@@ -25,6 +29,7 @@ export default function Home() {
   }, {
     title: "Image Converter",
     description: "Convert Images to Modern Formats",
+    categories: ["images", "converter"],
     features: [
       "Unlimited Converts",
       "Support Modern Image Formats",
@@ -34,6 +39,7 @@ export default function Home() {
   }, {
     title: "Audio Converter",
     description: "Convert Audio to Modern Formats",
+    categories: ["audio", "converter", "media"],
     features: [
       "Unlimited Converts",
       "Support Modern Audio Formats",
@@ -43,6 +49,7 @@ export default function Home() {
   }, {
     title: "Video Converter",
     description: "Convert Video to Modern Formats",
+    categories: ["videos", "converter", "media"],
     features: [
       "Unlimited Converts",
       "Support Modern Video Formats",
@@ -52,6 +59,7 @@ export default function Home() {
   }, {
     title: "Video to Audio",
     description: "Convert Video to Audio",
+    categories: ["videos", "audio", "converter"],
     features: [
       "Unlimited Converts",
       "Support Wide Range of Audio Formats",
@@ -60,6 +68,7 @@ export default function Home() {
   }, {
     title: "PDF Compressor",
     description: "Compress PDF for Better Size",
+    categories: ["documents", "compress", "converter"],
     features: [
       "Unlimited Compressions",
       "4 Compression Options",
@@ -68,6 +77,7 @@ export default function Home() {
   }, {
     title: "PDF to JPG Converter",
     description: "Convert PDF to JPG",
+    categories: ["documents", "images", "converter"],
     features: [
       "Unlimited Converts",
       "Multiple Pages Support",
@@ -76,12 +86,29 @@ export default function Home() {
   }, {
     title: "Unit Converter",
     description: "Convert Units",
+    categories: ["others", "converter"],
     features: [
       "Unlimited Converts",
       "Support Wide Range of Units",
     ],
     link: "/unit-converter"
   }];
+
+  const filters = [
+    { id: 'all', label: 'All' },
+    { id: 'images', label: 'Images' },
+    { id: 'videos', label: 'Videos' },
+    { id: 'audio', label: 'Audio' },
+    { id: 'documents', label: 'Documents' },
+    { id: 'compress', label: 'Compress' },
+    { id: 'converter', label: 'Converter' },
+    { id: 'media', label: 'Media' },
+    { id: 'others', label: 'Others' }
+  ];
+
+  const filteredData = data.filter(item =>
+    activeFilter === 'all' || item.categories.includes(activeFilter)
+  );
 
   return (
     <main className="min-h-screen bg-white">
@@ -96,19 +123,35 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 pb-32">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {data.map((item, index) => (
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex justify-center gap-2 mb-8 overflow-x-auto pb-4">
+          {filters.map((filter) => (
+            <Button
+              key={filter.id}
+              onClick={() => setActiveFilter(filter.id)}
+              variant={activeFilter === filter.id ? "default" : "outline"}
+              className={`rounded-full px-6 whitespace-nowrap ${activeFilter === filter.id
+                ? "text-white"
+                : "text-gray-500 hover:text-gray-700"
+                }`}
+            >
+              {filter.label}
+            </Button>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-32">
+          {filteredData.map((item, index) => (
             <Card
               key={index}
-              className="border-0 hover:shadow-[0_0_1rem_rgba(0,0,0,0.05)] transition-shadow duration-300"
+              className="border-0 hover:shadow-[0_0_1rem_rgba(0,0,0,0.05)] transition-shadow duration-300 flex flex-col h-[300px]"
             >
               <CardHeader className="space-y-3">
                 <CardTitle className="text-xl font-normal">{item.title}</CardTitle>
                 <CardDescription className="text-gray-500">{item.description}</CardDescription>
               </CardHeader>
 
-              <CardContent>
+              <CardContent className="flex-grow">
                 <ul className="space-y-2 text-sm text-gray-500">
                   {item.features.map((feature, index) => (
                     <li key={index} className="flex items-center">
@@ -119,7 +162,7 @@ export default function Home() {
                 </ul>
               </CardContent>
 
-              <CardFooter>
+              <CardFooter className="flex flex-col gap-4 mt-auto">
                 <Link href={item.link} className="w-full">
                   <Button
                     className="w-full text-white rounded-none font-light"
