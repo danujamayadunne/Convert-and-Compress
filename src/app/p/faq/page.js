@@ -17,7 +17,7 @@ export default function FAQPage() {
         {
             question: "Will image compression affect the quality of my photos?",
             answer:
-                "No. Our advanced compression algorithm maintains high-quality visuals while reducing file size. Customize quality settings as needed.",
+                "We user browser-based image compression to reduce file sizes,w hile maintaining the best possible quality.",
         },
         {
             question: "What audio formats can I convert between?",
@@ -25,9 +25,9 @@ export default function FAQPage() {
                 "Our audio converter supports MP3, WAV, AAC, FLAC, OGG, and more. Conversions retain the best possible quality.",
         },
         {
-            question: "Can I convert multiple videos at once?",
+            question: "Can I convert multiple images at once?",
             answer:
-                "Yes, our video converter supports batch processing, allowing you to convert several videos to formats like MP4, WebM, AVI, or MOV simultaneously.",
+                "Yes, both our image converter and compressor supports batch processing, allowing you to convert or compress several images to formats like JPG, PNG, JPEG, or WebP simultaneously.",
         },
         {
             question: "How do I reduce PDF file size without losing quality?",
