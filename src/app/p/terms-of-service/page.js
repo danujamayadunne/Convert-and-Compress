@@ -24,7 +24,7 @@ export default function TermsOfService() {
 
                 <p className="tracking-tight" style={{ marginTop: "19px" }}>
                     <span className="font-medium">3. Privacy and Data Handling</span><br />
-                    We are committed to protecting your privacy. Most of the services at Convert&Compress don&#39;t upload files to servers. However, in some services, files may upload to our servers for processing. The files you upload are processed and deleted automatically after use. By using our service, you acknowledge and consent to this handling of your data.
+                    We are committed to protecting your privacy. Most of our services do not require files to be uploaded to our servers. However, for certain services, uploaded files may be temporarily stored on our servers for processing. These files are automatically deleted after processing and are never stored longer than necessary. By using our service, you acknowledge and consent to this handling of your data.
                 </p>
 
                 <p className="tracking-tight" style={{ marginTop: "19px" }}>

@@ -18,7 +18,7 @@ export default function About() {
                 </p>
                 <p className="tracking-tight" style={{ marginTop: "19px" }}>
                     <span className="font-medium">2. Data Security</span><br />
-                    We use secure encryption protocols to protect your files during upload and processing. All files uploaded to our service are automatically deleted shortly after processing to maintain your privacy and ensure security.
+                    We are committed to protecting your privacy. Most of our services do not require files to be uploaded to our servers. However, for certain services, uploaded files may be temporarily stored on our servers for processing. These files are automatically deleted after processing and are never stored longer than necessary. By using our service, you acknowledge and consent to this handling of your data.
                 </p>
                 <p className="tracking-tight" style={{ marginTop: "19px" }}>
                     <span className="font-medium">3. Third-Party Services</span><br />
@@ -41,7 +41,7 @@ export default function About() {
                     If you have any questions about this Privacy Policy, please reach out to us via <Link href="/p/contact">Contact Us</Link>.
                 </p>
             </div>
-            <Footer/>
+            <Footer />
         </main>
     )
 }
