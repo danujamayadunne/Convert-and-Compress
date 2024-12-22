@@ -11,7 +11,7 @@ const poppins = Poppins({
 });
 
 const SITE_URL = 'https://convertandcompress.com';
-const SITE_TITLE = 'Free Online Image, Video, Audio & PDF Converter | Convert and Compress';
+const SITE_TITLE = 'Convert and Compress - Free Online File Converter & Compressor';
 const SITE_DESCRIPTION = 'Free tool to convert and compress images, videos,audio, and PDFs for free. No signup required. Enjoy fast, high-quality conversions with our easy-to-use online tool.';
 
 export const metadata: Metadata = {
