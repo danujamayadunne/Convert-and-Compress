@@ -136,6 +136,39 @@ export default function Home() {
         </div>
       </div>
 
+      <div className="max-w-4xl mx-auto px-6 pb-32">
+        <h2 className="text-xl font-normal text-center">Frequently Asked Questions</h2>
+        <div className="space-y-4 mt-6">
+          {[
+            {
+              question: "How can I compress files online for free without losing quality?",
+              answer: "You can use our free online tool to compress files while preserving quality. All processing happens directly in your browser, so your data remains private and secure.",
+            },
+            {
+              question: "What file formats are supported for conversion and compression?",
+              answer: "Our tool supports a wide range of formats, including PNG, JPEG, WebP, MP3, MP4, PDF, and more. Check the specific tool for detailed format compatibility.",
+            },
+            {
+              question: "Do I need to download or install any software to use your tool?",
+              answer: "No, you don't need to install anything. Our platform works entirely online, allowing you to convert and compress files directly in your browser.",
+            },
+            {
+              question: "Are there any limits on file size or usage for your tools?",
+              answer: "No, our tools allow unlimited usage and support large files, making it easy to compress or convert files without restrictions.",
+            },
+            {
+              question: "Why Convert&Compress is free?",
+              answer: "We believe in making essential tools accessible to everyone. That's why we created Convert&Compress for free, with no hidden costs or limitations.",
+            }
+          ].map((faq, index) => (
+            <details key={index} className="bg-gray-50 p-4 rounded-md">
+              <summary className="font-normal cursor-pointer">{faq.question}</summary>
+              <p className="text-gray-500 mt-2 text-sm">{faq.answer}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+
       <Footer />
     </main>
   );
