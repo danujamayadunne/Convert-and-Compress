@@ -18,7 +18,7 @@ export default function BlogPost() {
                             <span className="text-sm">·</span>
                             <span className="text-sm">7 min read</span>
                         </div>
-                        <div className="h-64 bg-gray-100 rounded-lg mb-8" />
+                        <img src="/OG.jpg" className=" bg-gray-100 rounded-lg mb-8" />
                     </header>
 
                     <div className="text-gray-700 leading-relaxed">
