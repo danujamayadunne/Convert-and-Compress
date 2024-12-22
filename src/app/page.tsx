@@ -50,6 +50,14 @@ export default function Home() {
     ],
     link: "/video-converter"
   }, {
+    title: "Video to Audio",
+    description: "Convert Video to Audio",
+    features: [
+      "Unlimited Converts",
+      "Support Wide Range of Audio Formats",
+    ],
+    link: "/video-to-audio"
+  }, {
     title: "PDF Compressor",
     description: "Compress PDF for Better Size",
     features: [

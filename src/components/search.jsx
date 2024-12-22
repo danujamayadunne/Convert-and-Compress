@@ -18,6 +18,7 @@ export default function SearchTool() {
         { name: "PDF to JPG", category: "Document Tools", icon: FileText, link: "/pdf-to-jpg", keywords: ["convert", "pdf", "jpg", "image", "document"] },
         { name: "PDF to Word", category: "Document Tools", icon: FileText, link: "/pdf-to-word", keywords: ["convert", "pdf", "word", "document"] },
         { name: "Unit Converter", category: "Unit Converter", icon: Ruler, link: "/unit-converter", keywords: ["convert", "unit", "length", "weight", "temperature", "speed", "time", "area", "volume", "pressure", "angle", "data", "enery", "pressure"] },
+        {name: "Video to Audio", category: "Video Tools", icon: FileMusic, link: "/video-to-audio", keywords: ["convert", "video", "audio", "mp3", "sound", "mp4", "music"]},
     ];
 
     const searchTools = (query) => {
