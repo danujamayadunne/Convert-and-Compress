@@ -165,9 +165,9 @@ export default function Home() {
               <CardFooter className="flex flex-col gap-4 mt-auto">
                 <Link href={item.link} className="w-full">
                   <Button
-                    className="w-full text-white rounded-none font-light"
+                    className="w-full text-white rounded-none font-normal"
                   >
-                    Convert
+                    Go to {item.title}
                   </Button>
                 </Link>
               </CardFooter>
