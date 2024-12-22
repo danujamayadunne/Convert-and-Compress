@@ -22,8 +22,8 @@ export default function Home() {
     categories: ["images", "compress", "converter"],
     features: [
       "Unlimited Compressions",
-      "Support Modern Image Formats",
-      "Quality Control",
+      "Support Image Formats Such as PNG, JPEG, WebP",
+      "4 Compression Options",
     ],
     link: "/image-compressor"
   }, {
@@ -32,7 +32,7 @@ export default function Home() {
     categories: ["images", "converter"],
     features: [
       "Unlimited Converts",
-      "Support Modern Image Formats",
+      "Support Image Formats Such as PNG, JPEG, WebP",
       "Quality Control",
     ],
     link: "/image-converter"
@@ -42,8 +42,8 @@ export default function Home() {
     categories: ["audio", "converter", "media"],
     features: [
       "Unlimited Converts",
-      "Support Modern Audio Formats",
-      "Quality Control",
+      "Support Audio Formats Such as MP3, WAV, FLAC",
+      "Bitrate Control",
     ],
     link: "/audio-converter"
   }, {
@@ -52,7 +52,7 @@ export default function Home() {
     categories: ["videos", "converter", "media"],
     features: [
       "Unlimited Converts",
-      "Support Modern Video Formats",
+      "Support Video Formats Such as MP4, WebM, MOV",
       "Quality Control",
     ],
     link: "/video-converter"
@@ -62,7 +62,7 @@ export default function Home() {
     categories: ["videos", "audio", "converter"],
     features: [
       "Unlimited Converts",
-      "Support Wide Range of Audio Formats",
+      "Support Audio Formats Such as MP3, WAV, OGG",
     ],
     link: "/video-to-audio"
   }, {
@@ -89,7 +89,8 @@ export default function Home() {
     categories: ["others", "converter"],
     features: [
       "Unlimited Converts",
-      "Support Wide Range of Units",
+      "Support Various Units",
+      "Time, Length, Weight, Temperature, and More",
     ],
     link: "/unit-converter"
   }];
