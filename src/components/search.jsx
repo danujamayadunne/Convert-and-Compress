@@ -13,7 +13,6 @@ export default function SearchTool() {
         { name: "Image Compressor", category: "Image Tools", icon: FileImage, link: "/image-compressor", keywords: ["compress", "image", "photo", "picture", "reduce size"] },
         { name: "Image Converter", category: "Image Tools", icon: FileImage, link: "/image-converter", keywords: ["convert", "image", "photo", "picture", "format", "webp", "png", "jpg", "jpeg"] },
         { name: "Video Converter", category: "Video Tools", icon: FileVideo, link: "/video-converter", keywords: ["convert", "video", "mp4", "format", "mov", "avi", "webm"] },
-        // { name: "Audio Compressor", category: "Audio Tools", icon: FileMusic, link: "/audio-compressor", keywords: ["compress", "audio", "mp3", "wav","sound", "music"] },
         { name: "Audio Converter", category: "Audio Tools", icon: FileMusic, link: "/audio-converter", keywords: ["convert", "audio", "mp3", "wav", "sound", "music"] },
         { name: "PDF Compressor", category: "Document Tools", icon: FileText, link: "/pdf-compressor", keywords: ["compress", "pdf", "document", "reduce size"] },
         { name: "PDF to JPG", category: "Document Tools", icon: FileText, link: "/pdf-to-jpg", keywords: ["convert", "pdf", "jpg", "image", "document"] },

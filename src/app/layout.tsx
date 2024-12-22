@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { Poppins } from "next/font/google";
+import { Toaster } from "@/components/ui/toaster"
 import "./globals.css";
 
 const poppins = Poppins({
@@ -82,6 +83,7 @@ export default function RootLayout({
       </head>
       <body className={poppins.className}>
         {children}
+        <Toaster />
         <GoogleAnalytics gaId="G-TZ9R31DFWJ" />
       </body>
     </html>

@@ -94,7 +94,7 @@ export default function BlogPost() {
                     <div className="flex items-center space-x-4">
                         <img src="/favicon.ico" className="h-12 w-12 rounded-full bg-gray-200" />
                         <div>
-                            <h3 className="font-medium text-gray-900">Compress & Optimize</h3>
+                            <h3 className="font-medium text-gray-900">Convert & Compress</h3>
                             <p className="text-gray-600 text-sm">Team</p>
                         </div>
                     </div>

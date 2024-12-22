@@ -95,7 +95,8 @@
 @media screen and (max-width: 900px) {
 
   .card {
-    min-width: 90vw;
+    min-width: 90vw!important;
+    max-width: 90vw!important;
     min-height: 300px;
   }
 

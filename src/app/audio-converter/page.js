@@ -6,6 +6,22 @@ export const metadata = {
     keywords: "audio converter, convert audio online, mp3 converter, wav converter, aac converter, flac converter, ogg converter, free audio converter, online audio converter, audio format converter, music converter, convert audio files, convert audio to mp3, convert audio to wav, convert audio to aac, audio converter for mobile, transform audio format, high-quality audio conversion, fast audio converter",
 };
 
+const STRUCTURED_DATA = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Audio Converter",
+    "url": "https://convertandcompress.com/audio-converter",
+    "description": metadata.description,
+};
+
 export default function Page() {
-    return <AudioConvert />
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(STRUCTURED_DATA) }}
+            />
+            <AudioConvert />
+        </>
+    );
 }

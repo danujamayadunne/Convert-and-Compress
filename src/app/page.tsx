@@ -65,16 +65,7 @@ export default function Home() {
       "Multiple Pages Support",
     ],
     link: "/pdf-to-jpg"
-  }, //{
-  //   title: "Audio Compressor",
-  //   description: "Compress Audio for Better Size",
-  //   features: [
-  //     "Unlimited Compressions",
-  //     "Quality Control",
-  //   ],
-  //   link: "/audio-compressor"
-  // },
-  {
+  }, {
     title: "Unit Converter",
     description: "Convert Units",
     features: [

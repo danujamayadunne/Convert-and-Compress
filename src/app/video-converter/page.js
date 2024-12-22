@@ -6,6 +6,22 @@ export const metadata = {
     keywords: "video converter, convert video online, mp4 converter, avi converter, mov converter, mkv converter, free video converter, online video converter, convert video to mp4, convert video to avi, convert video to mov, convert video to mkv",
 };
 
+const STRUCTURED_DATA = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Video Converter",
+    "url": "https://convertandcompress.com/video-converter",
+    "description": metadata.description,
+};
+
 export default function Page() {
-    return <VideoConvert />
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(STRUCTURED_DATA) }}
+            />
+            <VideoConvert />
+        </>
+    );
 }
