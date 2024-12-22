@@ -1,9 +1,9 @@
 import VideoToAudio from "./component"
 
 export const metadata = {
-    title: "Video to Audio - Convert Video to Audio Online",
-    description: "Easily convert video format into various audio formats like mp3, wav, m4a, flac, ogg, aac, etc. with",
-    keywords: "video to audio, convert video to audio, video to audio converter, video to audio online",
+    title: "Video to Audio - Convert Video to MP3, WAV, OGG",
+    description: "Easily convert video format into various audio formats like mp3, wav, and ogg.",
+    keywords: "video to audio, convert video to audio, video to audio converter, video to audio online, video to mp3, video to wav, video to ogg",
 };
 
 const STRUCTURED_DATA = {
