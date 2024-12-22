@@ -54,18 +54,26 @@ export default function BlogPage() {
             description: 'Learn how to reduce PDF file size easily with this go-to tool for compressing PDFs.',
             src: "/"
         },
+        {
+            slug: 'how-to-easily-convert-videos-to-MP3-benefits-and-tools',
+            title: 'How to Easily Convert Videos to MP3: Benefits and Tools',
+            description: 'Discover the benefits of converting videos to MP3 and the tools you need to get started.',
+            src: "/"
+        }
     ]
+
+    const reversePosts = [...posts].reverse();
     return (
         <div className="min-h-screen bg-white">
             <Navbar />
-            
+
             <div className="max-w-7xl mx-auto px-6 pt-32 pb-24 font-sans">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-light text-center leading-tight mb-12">
                     Blog Posts
                 </h1>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {posts.map((post) => (
+                    {reversePosts.map((post) => (
                         <div
                             key={post.slug}
                             className="border-0 hover:shadow-[0_0_1rem_rgba(0,0,0,0.05)] transition-shadow duration-300"
